@@ -90,7 +90,7 @@ a:hover {
 
 .container {
   max-width: 960px;
-  padding: 0 30px;
+  padding: 0 15px;
   margin: auto;
 }
 
@@ -173,8 +173,7 @@ html[dir="rtl"] .app__logo-wrapper {
 }
 @media (max-width: 768px) {
   .app__description {
-    margin-top: 8px;
-    margin-bottom: 0;
+    font-size: 0;
   }
 }
 .app__screenshots-list {
@@ -218,8 +217,13 @@ html[dir="rtl"] .app__logo-wrapper {
   flex-direction: row;
   align-items: center;
   margin-left: -9.8px;
+  margin-right: -9.8px;
 }
 .app__buttons--mobile {
+  display: none;
+}
+
+.app__osversion-alarm--mobile {
   display: none;
 }
 .app__osversion-alarm--desktop {
@@ -230,12 +234,12 @@ html[dir="rtl"] .app__logo-wrapper {
 
 @media (max-width: 768px) {
   .app__buttons {
-    margin-left: 0;
-    margin-bottom: 64px;
+    margin-bottom: -5px;
   }
   .app__buttons--mobile {
-    display: table-row;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   .app__buttons--desktop {
     display: none;
@@ -244,11 +248,13 @@ html[dir="rtl"] .app__logo-wrapper {
     display: none;
   }
   .app__osversion-alarm--mobile {
+    display: flex;
     font-size: var(--font-xxs);
     color: #808080;
-    margin-top: 16px;
+    margin-top: 15px;
     margin-left: 15px;
     margin-right: 15px;
+    margin-bottom: 33px;
   }
 }
 .app__button-download {
@@ -267,6 +273,14 @@ html[dir="rtl"] .app__logo-wrapper {
   box-shadow: 10px 0 40px rgba(0, 0, 0, 0.15);
   display: inline-block;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 7px 2.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .btn:hover {
@@ -332,6 +346,13 @@ html[dir="rtl"] .app__logo-wrapper {
 .app__info-title {
   font-size: var(--font-md);
   font-weight: 550;
+}
+
+.app__info {
+  margin-top: 20px;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 .app__featured-content {
